@@ -1,4 +1,0 @@
-org/blockchain/solc/compiler/test/SolidityCompilerTest.java
- org.blockchain.solc.compiler.test.SolidityCompilerTest
-org/blockchain/solc/compiler/test/SolcTest.java
- org.blockchain.solc.compiler.test.SolcTest

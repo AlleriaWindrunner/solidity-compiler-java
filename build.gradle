@@ -52,8 +52,8 @@ dependencies {
 }
 
 archivesBaseName = 'solidity-compiler-java'
-group = 'org.eleven'
-version = '1.0.0-SNAPSHOT'
+group = 'org.blockchain'
+version = '0.5.2.3'
 
 // Additional attribute definition
 ext {
@@ -153,7 +153,7 @@ publishing {
             pom {
                 name = 'AlleriaWindrunner'
                 description = 'java solidity compiler'
-                url = 'http://www.eleven.org'
+                url = 'http://www.blockchain.org'
 
                 licenses {
                     license {

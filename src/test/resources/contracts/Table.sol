@@ -1,3 +1,4 @@
+pragma solidity >=0.4.24 <0.6.11;
 
 contract TableFactory {
     function openTable(string memory) public view returns (Table) {} //open table

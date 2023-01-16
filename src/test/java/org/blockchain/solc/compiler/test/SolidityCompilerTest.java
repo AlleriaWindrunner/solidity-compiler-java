@@ -18,7 +18,7 @@ public class SolidityCompilerTest {
             URL url =
                     SolidityCompilerTest.class
                             .getClassLoader()
-                            .getSystemResource("solidity/Asset.sol");
+                            .getSystemResource("contracts/Asset.sol");
             File file = new File(url.getFile());
             SolidityCompiler.Result result =
                     SolidityCompiler.compile(file, false, true, SolidityCompiler.Options.ABI, SolidityCompiler.Options.BIN, SolidityCompiler.Options.INTERFACE, SolidityCompiler.Options.METADATA);
@@ -45,7 +45,7 @@ public class SolidityCompilerTest {
             URL url =
                     SolidityCompilerTest.class
                             .getClassLoader()
-                            .getSystemResource("solidity/Asset.sol");
+                            .getSystemResource("contracts/Asset.sol");
             File file = new File(url.getFile());
             SolidityCompiler.Result result =
                     SolidityCompiler.compile(file, true, true, SolidityCompiler.Options.ABI, SolidityCompiler.Options.BIN, SolidityCompiler.Options.INTERFACE, SolidityCompiler.Options.METADATA);

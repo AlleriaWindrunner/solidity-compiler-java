@@ -11,11 +11,12 @@
 * windows
 
 # 支持版本
->solidity-compiler-java支持三个版本的solidity编译器版本：
+>solidity-compiler-java支持以下版本的solidity编译器版本：
 
 * 0.4.25
 * 0.5.2
 * 0.6.10
+* 0.8.11
 
 # 使用指南
 
@@ -38,6 +39,54 @@ compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.5.2
 ```gradle
 compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.6.10.0'
 ```
+
+#### 0.8.11 版本
+```gradle
+compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.8.11.1'
+```
+
+### maven
+
+#### 0.4.25.0
+
+```xml
+<dependency>
+    <groupId>org.blockchain</groupId>
+    <artifactId>solidity-compiler-java</artifactId>
+    <version>0.4.25.0</version>
+</dependency>
+```
+
+#### 0.5.2.0
+
+```xml
+<dependency>
+    <groupId>org.blockchain</groupId>
+    <artifactId>solidity-compiler-java</artifactId>
+    <version>0.5.2.0</version>
+</dependency>
+```
+
+#### 0.6.10.0
+
+```xml
+<dependency>
+    <groupId>org.blockchain</groupId>
+    <artifactId>solidity-compiler-java</artifactId>
+    <version>0.6.10.0</version>
+</dependency>
+```
+
+#### 0.8.11.1
+
+```xml
+<dependency>
+    <groupId>org.blockchain</groupId>
+    <artifactId>solidity-compiler-java</artifactId>
+    <version>0.8.11.1</version>
+</dependency>
+```
+
 
 ## 核心接口
 

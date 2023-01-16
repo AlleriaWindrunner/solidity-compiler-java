@@ -52,7 +52,7 @@ dependencies {
 }
 
 archivesBaseName = 'solidity-compiler-java'
-group = 'org.eleven'
+group = 'org.blockchain'
 version = '1.0.0-SNAPSHOT'
 
 // Additional attribute definition

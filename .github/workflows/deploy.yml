@@ -2,7 +2,7 @@ name: CI with Gradle
 
 on:
   release:
-    branches: [ master ]
+    types: [ released ]
 
 jobs:
   build:

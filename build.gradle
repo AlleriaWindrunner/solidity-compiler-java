@@ -10,7 +10,7 @@ plugins {
 
 archivesBaseName = 'solidity-compiler-java'
 group = 'io.github.alleriawindrunner'
-version = '0.4.25.3'
+version = '0.4.25'
 
 java {
     withJavadocJar()

@@ -5,8 +5,8 @@
 # 支持平台
 
 * linux
-    * x64
-    * aarch64
+  * x64
+  * aarch64
 * mac
 * windows
 
@@ -16,6 +16,7 @@
 * 0.4.25
 * 0.5.2
 * 0.6.10
+* 0.8.11
 
 # 使用指南
 
@@ -23,66 +24,66 @@
 
 ### Gradle
 
-#### 0.4.25.3 版本
+#### 0.4.25 版本
 
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.4.25.3'
+compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.4.25'
 ```
 
-#### 0.5.2.3 版本
+#### 0.5.2 版本
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.5.2.3'
+compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.5.2'
 ```
 
-#### 0.6.10.3 版本
+#### 0.6.10 版本
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.6.10.3'
+compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.6.10'
 ```
 
-#### 0.8.11.1 版本
+#### 0.8.11 版本
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.8.11.1'
+compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.8.11'
 ```
 
 ### maven
 
-#### 0.4.25.3
+#### 0.4.25
 
 ```xml
 <dependency>
     <groupId>org.blockchain</groupId>
     <artifactId>solidity-compiler-java</artifactId>
-    <version>0.4.25.3</version>
+    <version>0.4.25</version>
 </dependency>
 ```
 
-#### 0.5.2.3
+#### 0.5.2
 
 ```xml
 <dependency>
     <groupId>org.blockchain</groupId>
     <artifactId>solidity-compiler-java</artifactId>
-    <version>0.5.2.3</version>
+    <version>0.5.2</version>
 </dependency>
 ```
 
-#### 0.6.10.3
+#### 0.6.10
 
 ```xml
 <dependency>
     <groupId>org.blockchain</groupId>
     <artifactId>solidity-compiler-java</artifactId>
-    <version>0.6.10.3</version>
+    <version>0.6.10</version>
 </dependency>
 ```
 
-#### 0.8.11.1
+#### 0.8.11
 
 ```xml
 <dependency>
     <groupId>org.blockchain</groupId>
     <artifactId>solidity-compiler-java</artifactId>
-    <version>0.8.11.1</version>
+    <version>0.8.11</version>
 </dependency>
 ```
 
@@ -104,18 +105,18 @@ public static Result SolidityCompiler::compile(byte[] source, boolean sm, boolea
 * boolean sm: 国密开关
 * combinedJson:
 * Option ... options: solc编译参数
-    * Options.ABI: 相当于solc --abi
-    * Options.BIN: 相当于solc --bin
-    * Options.INTERFACE: 相当于solc --interface
-    * Options.METADATA: 相当于solc --metadata
-    * Options.ASTJSON: 相当于solc --ast-json
+  * Options.ABI: 相当于solc --abi
+  * Options.BIN: 相当于solc --bin
+  * Options.INTERFACE: 相当于solc --interface
+  * Options.METADATA: 相当于solc --metadata
+  * Options.ASTJSON: 相当于solc --ast-json
 
 #### 响应参数
 
 * SolidityCompiler::Result对象
-    * boolean success: 是否编译成功
-    * String errors: 错误或者警告信息，编译失败时保存错误信息，编译成功时保存编译的警告信息
-    * String output: 编译结果，具体格式参考solc的返回格式
+  * boolean success: 是否编译成功
+  * String errors: 错误或者警告信息，编译失败时保存错误信息，编译成功时保存编译的警告信息
+  * String output: 编译结果，具体格式参考solc的返回格式
 
 ### 编译结果解析
 
@@ -130,7 +131,7 @@ public static CompilationResult CompilationResult::parse(String rawJson) throws 
 #### 响应参数
 
 * CompilationResult对象
-    * Map<String, ContractMetadata> contracts: 合约文件所有合约的编译结果
+  * Map<String, ContractMetadata> contracts: 合约文件所有合约的编译结果
 
 ## 示例
 

@@ -4,17 +4,16 @@ plugins {
     id 'signing'
     id 'java-library'
     id 'maven-publish'
-    id 'org.ajoberstar.grgit' version '4.0.1'
-    id 'com.github.sherter.google-java-format' version '0.8'
 }
 
 version = '0.4.25'
 group = 'io.github.alleriawindrunner'
 
 apply plugin: "java"
+apply plugin: "idea"
+apply plugin: "signing"
 apply plugin: "java-library"
 apply plugin: "maven-publish"
-apply plugin: "signing"
 
 repositories {
     maven { url "https://maven.aliyun.com/repository/public/" }

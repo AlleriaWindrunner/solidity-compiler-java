@@ -8,14 +8,8 @@ plugins {
     id 'com.github.sherter.google-java-format' version '0.8'
 }
 
-archivesBaseName = 'solidity-compiler-java'
-group = 'io.github.alleriawindrunner'
 version = '0.4.25'
-
-java {
-    withJavadocJar()
-    withSourcesJar()
-}
+group = 'io.github.alleriawindrunner'
 
 javadoc {
     options.addStringOption("charset", "UTF-8")

@@ -1,4 +1,4 @@
-package org.blockchain.solc.compiler;
+package io.github.alleriawindrunner.solc.compiler;
 
 import java.io.File;
 import java.io.IOException;

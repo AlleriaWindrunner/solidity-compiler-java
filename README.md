@@ -13,10 +13,10 @@
 # 支持版本
 >solidity-compiler-java支持三个版本的solidity编译器版本：
 
-* 0.4.25.3
-* 0.5.2.3
-* 0.6.10.3
-* 0.8.11.1
+* 0.4.25
+* 0.5.2
+* 0.6.10
+* 0.8.11
 
 # 使用指南
 
@@ -24,66 +24,66 @@
 
 ### Gradle
 
-#### 0.4.25.3 版本
+#### 0.4.25 版本
 
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.4.25.3'
+compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.4.25'
 ```
 
-#### 0.5.2.3 版本
+#### 0.5.2 版本
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.5.2.3'
+compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.5.2'
 ```
 
-#### 0.6.10.3 版本
+#### 0.6.10 版本
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.6.10.3'
+compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.6.10'
 ```
 
-#### 0.8.11.1 版本
+#### 0.8.11 版本
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.8.11.1'
+compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.8.11'
 ```
 
 ### maven
 
-#### 0.4.25.3
+#### 0.4.25
 
 ```xml
 <dependency>
     <groupId>org.blockchain</groupId>
     <artifactId>solidity-compiler-java</artifactId>
-    <version>0.4.25.3</version>
+    <version>0.4.25</version>
 </dependency>
 ```
 
-#### 0.5.2.3
+#### 0.5.2
 
 ```xml
 <dependency>
     <groupId>org.blockchain</groupId>
     <artifactId>solidity-compiler-java</artifactId>
-    <version>0.5.2.3</version>
+    <version>0.5.2</version>
 </dependency>
 ```
 
-#### 0.6.10.3
+#### 0.6.10
 
 ```xml
 <dependency>
     <groupId>org.blockchain</groupId>
     <artifactId>solidity-compiler-java</artifactId>
-    <version>0.6.10.3</version>
+    <version>0.6.10</version>
 </dependency>
 ```
 
-#### 0.8.11.1
+#### 0.8.11
 
 ```xml
 <dependency>
     <groupId>org.blockchain</groupId>
     <artifactId>solidity-compiler-java</artifactId>
-    <version>0.8.11.1</version>
+    <version>0.8.11</version>
 </dependency>
 ```
 

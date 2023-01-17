@@ -37,25 +37,12 @@ dependencies {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'solidity-compiler-java'
             from components.java
+            artifact sourcesJar
+            artifact javadocJar
+
             pom {
-                name = 'solidity-compiler-java'
-                description = 'A java compiler for the solidity.'
-                url = 'https://github.com/alleriawindrunner/solidity-compiler-java'
-                licenses {
-                    license {
-                        name = 'Apache License 2.0'
-                        url = 'http://www.apache.org/licenses/'
-                    }
-                }
-                developers {
-                    developer {
-                        id = 'AlleriaWindrunner'
-                        name = 'HUANGMING'
-                        email = 'eleven.hm@vip.163.com'
-                    }
-                }
+                description = "A java compiler for the solidity."
                 scm {
                     connection = 'scm:git:https://github.com/AlleriaWindrunner/solidity-compiler-java.git'
                     developerConnection = 'scm:git:ssh:git@github.com:AlleriaWindrunner/solidity-compiler-java.git'
@@ -67,15 +54,15 @@ publishing {
 
     repositories {
         maven {
-            name = "OSSRH"
-            if (project.version.toString().endsWith("-SNAPSHOT")) {
-                url = "https://s01.oss.sonatype.org/content/repositories/snapshots"
-            } else {
-                url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-            }
             credentials {
-                username = findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
-                password = findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")
+                username findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
+                password findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")
+            }
+
+            if (project.version.toString().endsWith("-SNAPSHOT")) {
+                url "https://oss.sonatype.org/content/repositories/snapshots"
+            } else {
+                url "https://oss.sonatype.org/service/local/staging/deploy/maven2"
             }
         }
     }

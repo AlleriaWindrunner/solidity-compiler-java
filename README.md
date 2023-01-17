@@ -130,7 +130,7 @@ public static CompilationResult CompilationResult::parse(String rawJson) throws 
 
 #### 响应参数
 
-* CompilationResult对象
+* CompilationResult对象 
   * Map<String, ContractMetadata> contracts: 合约文件所有合约的编译结果
 
 ## 示例

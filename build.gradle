@@ -6,7 +6,7 @@ plugins {
     id 'maven-publish'
 }
 
-version = '0.4.25'
+version = '0.5.2'
 group = 'io.github.alleriawindrunner'
 
 apply plugin: "java"

@@ -4,24 +4,19 @@ plugins {
     id 'signing'
     id 'java-library'
     id 'maven-publish'
-    id 'org.ajoberstar.grgit' version '4.0.1'
-    id 'com.github.sherter.google-java-format' version '0.8'
 }
 
-archivesBaseName = 'solidity-compiler-java'
-group = 'io.github.alleriawindrunner'
 version = '0.6.10'
+group = 'io.github.alleriawindrunner'
 
-java {
-    withJavadocJar()
-    withSourcesJar()
-}
+apply plugin: "java"
+apply plugin: "idea"
+apply plugin: "signing"
+apply plugin: "java-library"
+apply plugin: "maven-publish"
 
-javadoc {
-    options.addStringOption("charset", "UTF-8")
-    if (JavaVersion.current().isJava9Compatible()) {
-        options.addBooleanOption('html5', true)
-    }
+repositories {
+    maven { url "https://maven.aliyun.com/repository/public/" }
 }
 
 dependencies {
@@ -34,28 +29,47 @@ dependencies {
     compile group: 'com.google.code.gson', name:'gson', version:'2.9.0'
 }
 
+task sourcesJar(type: Jar, dependsOn: classes) {
+    archiveClassifier = "sources"
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    archiveClassifier = "javadoc"
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'solidity-compiler-java'
             from components.java
+            artifact sourcesJar
+            artifact javadocJar
+
             pom {
                 name = 'solidity-compiler-java'
-                description = 'A java compiler for the solidity.'
-                url = 'https://github.com/alleriawindrunner/solidity-compiler-java'
+                description = "A java compiler for the solidity."
+                url = 'https://github.com/AlleriaWindrunner/solidity-compiler-java'
+
                 licenses {
                     license {
-                        name = 'Apache License 2.0'
-                        url = 'http://www.apache.org/licenses/'
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
                     }
                 }
+
                 developers {
                     developer {
-                        id = 'AlleriaWindrunner'
-                        name = 'HUANGMING'
+                        name = 'AlleriaWindrunner'
                         email = 'eleven.hm@vip.163.com'
                     }
                 }
+
                 scm {
                     connection = 'scm:git:https://github.com/AlleriaWindrunner/solidity-compiler-java.git'
                     developerConnection = 'scm:git:ssh:git@github.com:AlleriaWindrunner/solidity-compiler-java.git'
@@ -67,15 +81,15 @@ publishing {
 
     repositories {
         maven {
-            name = "OSSRH"
-            if (project.version.toString().endsWith("-SNAPSHOT")) {
-                url = "https://s01.oss.sonatype.org/content/repositories/snapshots"
-            } else {
-                url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-            }
             credentials {
-                username = findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
-                password = findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")
+                username findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
+                password findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")
+            }
+
+            if (project.version.toString().endsWith("-SNAPSHOT")) {
+                url "https://s01.oss.sonatype.org/content/repositories/snapshots"
+            } else {
+                url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
             }
         }
     }

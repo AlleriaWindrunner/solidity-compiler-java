@@ -1,4 +1,4 @@
-package org.blockchain.solc.compiler.test;
+package io.github.alleriawindrunner.solc.compiler.test;
 
 import static org.junit.Assert.assertTrue;
 
@@ -6,8 +6,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
-import org.blockchain.solc.compiler.SolidityCompiler;
-import org.blockchain.solc.compiler.CompilationResult;
+import io.github.alleriawindrunner.solc.compiler.CompilationResult;
+import io.github.alleriawindrunner.solc.compiler.SolidityCompiler;
 import org.junit.Test;
 
 public class SolidityCompilerTest {

@@ -1,4 +1,4 @@
-package org.blockchain.solc.compiler;
+package io.github.alleriawindrunner.solc.compiler;
 
 import static java.util.stream.Collectors.toList;
 

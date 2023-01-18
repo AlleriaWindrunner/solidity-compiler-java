@@ -27,22 +27,22 @@
 #### 0.4.25 版本
 
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.4.25'
+compile group: 'io.github.alleriawindrunner', name: 'solidity-compiler-java', version: '0.4.25'
 ```
 
 #### 0.5.2 版本
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.5.2'
+compile group: 'io.github.alleriawindrunner', name: 'solidity-compiler-java', version: '0.5.2'
 ```
 
 #### 0.6.10 版本
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.6.10'
+compile group: 'io.github.alleriawindrunner', name: 'solidity-compiler-java', version: '0.6.10'
 ```
 
 #### 0.8.11 版本
 ```gradle
-compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.8.11'
+compile group: 'io.github.alleriawindrunner', name: 'solidity-compiler-java', version: '0.8.11'
 ```
 
 ### maven
@@ -51,7 +51,7 @@ compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.8.1
 
 ```xml
 <dependency>
-    <groupId>org.blockchain</groupId>
+    <groupId>io.github.alleriawindrunner</groupId>
     <artifactId>solidity-compiler-java</artifactId>
     <version>0.4.25</version>
 </dependency>
@@ -61,7 +61,7 @@ compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.8.1
 
 ```xml
 <dependency>
-    <groupId>org.blockchain</groupId>
+    <groupId>io.github.alleriawindrunner</groupId>
     <artifactId>solidity-compiler-java</artifactId>
     <version>0.5.2</version>
 </dependency>
@@ -71,7 +71,7 @@ compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.8.1
 
 ```xml
 <dependency>
-    <groupId>org.blockchain</groupId>
+    <groupId>io.github.alleriawindrunner</groupId>
     <artifactId>solidity-compiler-java</artifactId>
     <version>0.6.10</version>
 </dependency>
@@ -81,7 +81,7 @@ compile group: 'org.blockchain', name: 'solidity-compiler-java', version: '0.8.1
 
 ```xml
 <dependency>
-    <groupId>org.blockchain</groupId>
+    <groupId>io.github.alleriawindrunner</groupId>
     <artifactId>solidity-compiler-java</artifactId>
     <version>0.8.11</version>
 </dependency>

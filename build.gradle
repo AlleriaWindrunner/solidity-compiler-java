@@ -59,7 +59,24 @@ publishing {
             artifact javadocJar
 
             pom {
+                name = 'solidity-compiler-java'
                 description = "A java compiler for the solidity."
+                url = 'https://github.com/AlleriaWindrunner/solidity-compiler-java'
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        name = 'AlleriaWindrunner'
+                        email = 'eleven.hm@vip.163.com'
+                    }
+                }
+
                 scm {
                     connection = 'scm:git:https://github.com/AlleriaWindrunner/solidity-compiler-java.git'
                     developerConnection = 'scm:git:ssh:git@github.com:AlleriaWindrunner/solidity-compiler-java.git'

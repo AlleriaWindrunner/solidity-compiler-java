@@ -1,7 +1,7 @@
-package org.blockchain.solc.compiler.test;
+package io.github.alleriawindrunner.solc.compiler.test;
 
 import java.io.IOException;
-import org.blockchain.solc.compiler.SolidityCompiler;
+import io.github.alleriawindrunner.solc.compiler.SolidityCompiler;
 import org.junit.Assert;
 import org.junit.Test;
 

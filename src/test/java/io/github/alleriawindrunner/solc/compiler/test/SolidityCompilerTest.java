@@ -1,17 +1,13 @@
-package org.blockchain.solc.compiler.test;
+package io.github.alleriawindrunner.solc.compiler.test;
 
-import static org.blockchain.solc.compiler.SolidityCompiler.Options.ABI;
-import static org.blockchain.solc.compiler.SolidityCompiler.Options.BIN;
-import static org.blockchain.solc.compiler.SolidityCompiler.Options.INTERFACE;
-import static org.blockchain.solc.compiler.SolidityCompiler.Options.METADATA;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import org.blockchain.solc.compiler.CompilationResult;
-import org.blockchain.solc.compiler.SolidityCompiler;
-import org.blockchain.solc.compiler.SolidityCompiler.Result;
+
+import io.github.alleriawindrunner.solc.compiler.CompilationResult;
+import io.github.alleriawindrunner.solc.compiler.SolidityCompiler;
 import org.junit.Test;
 
 public class SolidityCompilerTest {
@@ -24,8 +20,8 @@ public class SolidityCompilerTest {
                             .getClassLoader()
                             .getSystemResource("contracts/Asset.sol");
             File file = new File(url.getFile());
-            Result result =
-                    SolidityCompiler.compile(file, false, true, ABI, BIN, INTERFACE, METADATA);
+            SolidityCompiler.Result result =
+                    SolidityCompiler.compile(file, false, true, SolidityCompiler.Options.ABI, SolidityCompiler.Options.BIN, SolidityCompiler.Options.INTERFACE, SolidityCompiler.Options.METADATA);
             assertTrue(
                     "compile solidity failed, solidity error: " + result.getErrors(),
                     !result.isFailed());
@@ -51,8 +47,8 @@ public class SolidityCompilerTest {
                             .getClassLoader()
                             .getSystemResource("contracts/Asset.sol");
             File file = new File(url.getFile());
-            Result result =
-                    SolidityCompiler.compile(file, true, true, ABI, BIN, INTERFACE, METADATA);
+            SolidityCompiler.Result result =
+                    SolidityCompiler.compile(file, true, true, SolidityCompiler.Options.ABI, SolidityCompiler.Options.BIN, SolidityCompiler.Options.INTERFACE, SolidityCompiler.Options.METADATA);
             assertTrue(
                     "compile solidity failed, solidity error: " + result.getErrors(),
                     !result.isFailed());

@@ -1,4 +1,4 @@
-package org.blockchain.solc.compiler;
+package io.github.alleriawindrunner.solc.compiler;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;

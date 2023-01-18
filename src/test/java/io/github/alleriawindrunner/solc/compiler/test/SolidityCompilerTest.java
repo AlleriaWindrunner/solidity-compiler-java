@@ -64,5 +64,6 @@ public class SolidityCompilerTest {
         } catch (IOException e) {
             assertTrue("compile solidity failed, error: " + e.getMessage(), false);
         }
+
     }
 }
